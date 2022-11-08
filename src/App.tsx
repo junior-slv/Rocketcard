@@ -1,18 +1,18 @@
 import React from 'react';
-import { StyledContainer, LeftMenu, RightMenu, Card} from './AppCss'
+import { StyledContainer, StyledButton, LeftMenu, RightMenu, Card} from './components/StyledComponents'
 
 function App() {
   return (
     <StyledContainer>   
-        <LeftMenu>
-          <Card>
+      <LeftMenu>
+        <Card>
 
-            </Card>
-        </LeftMenu>
-        <RightMenu>
- 
-        </RightMenu>
-    </StyledContainer>
+          </Card>
+      </LeftMenu>
+      <RightMenu>
+        <StyledButton> Gerar background </StyledButton>
+      </RightMenu>
+  </StyledContainer>
   );
 }
 
