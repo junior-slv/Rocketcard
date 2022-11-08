@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledContainer, LeftMenu, RightMenu, Card} from './AppCss.jsx'
+import { StyledContainer, LeftMenu, RightMenu, Card} from './AppCss'
 
 function App() {
   return (
