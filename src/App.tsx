@@ -1,13 +1,15 @@
 import React from 'react';
-import { StyledContainer, StyledButton, LeftMenu, RightMenu, Card} from './components/StyledComponents'
+import { StyledContainer, StyledButton, CardBackground, LeftMenu, RightMenu, Card} from './components/StyledComponents'
 
 function App() {
   return (
     <StyledContainer>   
       <LeftMenu>
-        <Card>
-
+        <CardBackground>
+          <Card>
+            
           </Card>
+        </CardBackground>
       </LeftMenu>
       <RightMenu>
         <StyledButton> Gerar background </StyledButton>
