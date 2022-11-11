@@ -15,7 +15,7 @@ export const StyledContainer = styled.div`
 export const LeftMenu = styled.div`
 width: 100vw;
 height: 100vh;
-background #808080;
+background #000000;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -24,7 +24,7 @@ justify-content: center;
 export const RightMenu = styled.div`
 width: 100vw;
 height: 100vh;
-background: #808080;
+background: #000000;
 display: flex;
 align-items: center;
 

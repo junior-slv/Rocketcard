@@ -13,7 +13,7 @@ function App() {
   const [user, setUser] = useState()
   useEffect(() => {
     api
-      .get(`/users/${texto}`)
+      .get(`/users/junior-slv`)
       .then((response) => setUser(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
