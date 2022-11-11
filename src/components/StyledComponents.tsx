@@ -2,20 +2,20 @@ import styled from "styled-components";
 
 
 export const StyledButton = styled.button`
-padding: 16px 32px;
-background: #000;
-border-radius: 15px;
-color: #fff;
+    padding: 16px 32px;
+    background: #000;
+    border-radius: 15px;
+    color: #fff;
 ` 
 export const StyledContainer = styled.div`
-margin: 0;
-display: flex;
+    margin: 0;
+    display: flex;
 
 `
 export const LeftMenu = styled.div`
 width: 100vw;
 height: 100vh;
-background #000000;
+background #808080;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -24,7 +24,7 @@ justify-content: center;
 export const RightMenu = styled.div`
 width: 100vw;
 height: 100vh;
-background: #000000;
+background: #808080;
 display: flex;
 align-items: center;
 
