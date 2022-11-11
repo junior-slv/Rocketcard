@@ -5,20 +5,24 @@ import followers from './assets/followers.svg';
 import following from './assets/following.svg';
 import repository from './assets/repository.svg';
 import location from './assets/location.svg';
-import Enviar from './Scripts/valor';
-import {texto} from './Scripts/valor';
+var value = "junior-slv"
+
+
+    
+
 
 function App() {
 
   const [user, setUser] = useState()
   useEffect(() => {
     api
-      .get(`/users/junior-slv`)
+      .get(`${value}`)
       .then((response) => setUser(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
   }, []);
+  
   return (
     
     <StyledContainer>  
@@ -41,7 +45,7 @@ function App() {
       <RightMenu>
       <form action="">
   <input type="text" id="name" name="name"/>
-  <input type="submit" onClick={Enviar} value="Enviar"/>
+  <input type="submit" id='name' value="Enviar"/>
 </form>
         <StyledButton> Gerar background </StyledButton>
       </RightMenu>

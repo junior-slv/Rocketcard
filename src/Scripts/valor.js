@@ -1,9 +1,10 @@
-
+import value from '../App'
 function Enviar(){
-    var input = document.getElementById("name");
-    var texto = input.value;
-    console.log(texto)
+    
+    const name = document.getElementById("name");
+    value = name.value;
+    console.log(value)
 }
 export default Enviar;
-export var texto;
+
 
