@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { StyledContainer, StyledButton, CardBackground, LeftMenu, RightMenu, Card, StyledTitle, StyledImg} from './components/StyledComponents'
 import axios from "axios";
+import followersicon from './assets/followers.svg';
+import followingicon from './assets/following.svg';
+import locationicon from './assets/location.svg';
+import repositoryicon from './assets/repository.svg';
+
 type GITHUBResponse = {
   name: string;
   avatar_url: string;
@@ -36,7 +41,9 @@ function App() {
         console.log(err);
       });
   };
+  
   return (
+    
     <StyledContainer>  
       <LeftMenu>
         <CardBackground>
@@ -44,10 +51,10 @@ function App() {
             <StyledTitle>{name}</StyledTitle>
             <img id='useravatar'src={avatarURL}/>
             <div className='infos'>
-              <p><img /> {followers} Seguidores</p>
-              <p><img/> {following} Seguindo</p>
-              <p><img/> {publicrepos} Repositórios</p>
-              <p><img/> {location}</p>
+              <p><img src={followersicon}/> {followers} Seguidores</p>
+              <p><img src={followingicon}/> {following} Seguindo</p>
+              <p><img src={repositoryicon}/> {publicrepos} Repositórios</p>
+              <p><img src={locationicon}/> {location}</p>
             </div>   
           </Card>
         </CardBackground>
