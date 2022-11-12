@@ -19,11 +19,11 @@ export const Container = styled.div`
     display: flex;
 
 `
-export const LeftMenu = styled.div`
+export let LeftMenu = styled.div`
     width: 100vw;
     height: 100vh;
     background: #3B3486;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 `
@@ -86,3 +86,13 @@ export const Infos = styled.div`
     height: 202px;
 `
 
+export default function Display(){
+    LeftMenu = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background: #3B3486;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+}

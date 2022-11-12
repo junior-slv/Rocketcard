@@ -5,6 +5,7 @@ import { Container,
   Card, P, Infos, GlobalStyle,
   AvatarIMG, Iconsvg} 
   from './components/StyledComponents'
+import Display from './components/StyledComponents';
 import axios from "axios";
 import followersicon from './assets/followers.svg';
 import followingicon from './assets/following.svg';
@@ -27,10 +28,13 @@ function App() {
   const [following, setFollowing] = useState("Aguardando...");
   const [followers, setFollowers] = useState("Aguardando...");
   const [publicrepos, setPublicrepos] = useState("Aguardando...");
-  const [location, setlocation] = useState("Aguardando...");
+  const [location, setLocation] = useState("Aguardando...");
+
+  
 
   
   const handleSearch = () => {
+    Display();
     axios
       .get<GITHUBResponse>(`https://api.github.com/users/${userName}`)
       .then((res) => {
@@ -39,11 +43,15 @@ function App() {
         setFollowing(res.data.following);
         setFollowers(res.data.followers);
         setPublicrepos(res.data.public_repos);
-        setlocation(res.data.location);
+        setLocation(res.data.location);
+        if(location == null){
+          setLocation('Não inserido')
+        }
       })
       .catch((err) => {
         console.log(err);
       });
+
   };
   
   return (
@@ -64,7 +72,7 @@ function App() {
         </CardBackground>
       </LeftMenu>
       <RightMenu>
-        <P>Insira o usuário do Github</P>
+        <P>Procure um username do Github</P>
         <input
           type="text"
           placeholder="Digite um username"
