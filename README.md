@@ -7,3 +7,10 @@
 - Typescript
 - React
 
+# 🚀 **Frameworks**
+
+- Styled Components
+- Axios
+
+---
+
